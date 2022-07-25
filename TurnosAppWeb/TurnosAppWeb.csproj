@@ -1,0 +1,349 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ABAC93CA-FFB8-4209-8820-40C939F12DC4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TurnosAppWeb</RootNamespace>
+    <AssemblyName>TurnosAppWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44367</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Gestion\MenuAdmin.aspx" />
+    <Content Include="Gestion\MenuGestion.aspx" />
+    <Content Include="Gestion\MenuPaciente.aspx" />
+    <Content Include="Gestion\MenuProfesional.aspx" />
+    <Content Include="Gestion\PanelTurnosGeneral.aspx" />
+    <Content Include="Gestion\PanelTurnosPaciente.aspx" />
+    <Content Include="Gestion\PanelTurnosProfesional.aspx" />
+    <Content Include="Tablas\ProfesionalListado.aspx" />
+    <Content Include="Tablas\EspecialidadForm.aspx" />
+    <Content Include="Tablas\EstadoTurnoForm.aspx" />
+    <Content Include="Tablas\EstadoTurnoListado.aspx" />
+    <Content Include="Tablas\PerfilUsuarioForm.aspx" />
+    <Content Include="Tablas\PerfilUsuarioListado.aspx" />
+    <Content Include="Tablas\registro.aspx" />
+    <Content Include="Tablas\TipoDocumentoForm.aspx" />
+    <Content Include="Tablas\TipoDocumentoListado.aspx" />
+    <Content Include="Tablas\TurnoListado.aspx" />
+    <Content Include="Tablas\UsuarioForm.aspx" />
+    <Content Include="Tablas\ObraSocialForm.aspx" />
+    <Content Include="Content\Style.css" />
+    <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="listados.aspx" />
+    <Content Include="Tablas\ObraSocialListado.aspx" />
+    <Content Include="Tablas\UsuarioListado.aspx" />
+    <Content Include="Tablas\EspecialidadListado.aspx" />
+    <Content Include="Tablas\TurnoForm.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Gestion\MenuAdmin.aspx.cs">
+      <DependentUpon>MenuAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion\MenuAdmin.aspx.designer.cs">
+      <DependentUpon>MenuAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\MenuGestion.aspx.cs">
+      <DependentUpon>MenuGestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion\MenuGestion.aspx.designer.cs">
+      <DependentUpon>MenuGestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\MenuPaciente.aspx.cs">
+      <DependentUpon>MenuPaciente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion\MenuPaciente.aspx.designer.cs">
+      <DependentUpon>MenuPaciente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\MenuProfesional.aspx.cs">
+      <DependentUpon>MenuProfesional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion\MenuProfesional.aspx.designer.cs">
+      <DependentUpon>MenuProfesional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\PanelTurnosGeneral.aspx.cs">
+      <DependentUpon>PanelTurnosGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion\PanelTurnosGeneral.aspx.designer.cs">
+      <DependentUpon>PanelTurnosGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\PanelTurnosPaciente.aspx.cs">
+      <DependentUpon>PanelTurnosPaciente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion\PanelTurnosPaciente.aspx.designer.cs">
+      <DependentUpon>PanelTurnosPaciente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\PanelTurnosProfesional.aspx.cs">
+      <DependentUpon>PanelTurnosProfesional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gestion\PanelTurnosProfesional.aspx.designer.cs">
+      <DependentUpon>PanelTurnosProfesional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\ProfesionalListado.aspx.cs">
+      <DependentUpon>ProfesionalListado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\ProfesionalListado.aspx.designer.cs">
+      <DependentUpon>ProfesionalListado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\EspecialidadForm.aspx.cs">
+      <DependentUpon>EspecialidadForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\EspecialidadForm.aspx.designer.cs">
+      <DependentUpon>EspecialidadForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\EstadoTurnoForm.aspx.cs">
+      <DependentUpon>EstadoTurnoForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\EstadoTurnoForm.aspx.designer.cs">
+      <DependentUpon>EstadoTurnoForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\EstadoTurnoListado.aspx.cs">
+      <DependentUpon>EstadoTurnoListado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\EstadoTurnoListado.aspx.designer.cs">
+      <DependentUpon>EstadoTurnoListado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\PerfilUsuarioForm.aspx.cs">
+      <DependentUpon>PerfilUsuarioForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\PerfilUsuarioForm.aspx.designer.cs">
+      <DependentUpon>PerfilUsuarioForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\PerfilUsuarioListado.aspx.cs">
+      <DependentUpon>PerfilUsuarioListado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\PerfilUsuarioListado.aspx.designer.cs">
+      <DependentUpon>PerfilUsuarioListado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\registro.aspx.cs">
+      <DependentUpon>registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\registro.aspx.designer.cs">
+      <DependentUpon>registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\TipoDocumentoForm.aspx.cs">
+      <DependentUpon>TipoDocumentoForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\TipoDocumentoForm.aspx.designer.cs">
+      <DependentUpon>TipoDocumentoForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\TipoDocumentoListado.aspx.cs">
+      <DependentUpon>TipoDocumentoListado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\TipoDocumentoListado.aspx.designer.cs">
+      <DependentUpon>TipoDocumentoListado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\TurnoListado.aspx.cs">
+      <DependentUpon>TurnoListado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\TurnoListado.aspx.designer.cs">
+      <DependentUpon>TurnoListado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\UsuarioForm.aspx.cs">
+      <DependentUpon>UsuarioForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\UsuarioForm.aspx.designer.cs">
+      <DependentUpon>UsuarioForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\ObraSocialForm.aspx.cs">
+      <DependentUpon>ObraSocialForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\ObraSocialForm.aspx.designer.cs">
+      <DependentUpon>ObraSocialForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="listados.aspx.cs">
+      <DependentUpon>listados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listados.aspx.designer.cs">
+      <DependentUpon>listados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\ObraSocialListado.aspx.cs">
+      <DependentUpon>ObraSocialListado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\ObraSocialListado.aspx.designer.cs">
+      <DependentUpon>ObraSocialListado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\UsuarioListado.aspx.cs">
+      <DependentUpon>UsuarioListado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\UsuarioListado.aspx.designer.cs">
+      <DependentUpon>UsuarioListado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\EspecialidadListado.aspx.cs">
+      <DependentUpon>EspecialidadListado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\EspecialidadListado.aspx.designer.cs">
+      <DependentUpon>EspecialidadListado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TunosWeb.Master.cs">
+      <DependentUpon>TunosWeb.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TunosWeb.Master.designer.cs">
+      <DependentUpon>TunosWeb.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas\TurnoForm.aspx.cs">
+      <DependentUpon>TurnoForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas\TurnoForm.aspx.designer.cs">
+      <DependentUpon>TurnoForm.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="TunosWeb.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TurnosDominio\TurnosDominio.csproj">
+      <Project>{6972fac3-e6dd-46a4-86c0-5d97c569bb0f}</Project>
+      <Name>TurnosDominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TurnosNegocio\TurnosNegocio.csproj">
+      <Project>{4f0765ef-9574-4207-a005-d78034a8fee8}</Project>
+      <Name>TurnosNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63126</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44367/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

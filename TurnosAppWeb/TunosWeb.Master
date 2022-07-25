@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TunosWeb.master.cs" Inherits="TurnosAppWeb.TunosWeb" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="Content/Style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <title>TurnosApp</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="form__div">
+            <header>
+                <nav class="navbar sticky-top navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="">Central de Turnos</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <asp:Button id="home" OnClick="home_Click" CssClass="nav-link active"  Text="Home" runat="server" />
+                                    
+                                </li>
+<%--                                <li class="nav-item">
+                                    <a class="nav-link" href="../Tablas/UsuarioListado.aspx">Usuarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Tablas/ProfesionalListado.aspx">Profesionales</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Tablas/especialidadlistado.aspx">Especialidades</a>
+                                </li>--%>
+                                
+                        <hr class="dropdown-divider">
+                        <asp:Button ID="btnCerrarsession" runat="server" Text="CERRAR SESSIÓN" OnClick="btnCerrarsession_Click" class="btn btn-dark" Visible="false" />
+                        <% //<a class="nav-link active" aria-current="page" href="/default.aspx">CERRAR SESSIÓN</a> %>
+                    </div>
+                </nav>
+            </header>
+            <div id="layout">
+                <div class="container py-3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <footer class="mt-2 d-flex justify-content-center">2022 - TP Cuatrimestral Programación III - Central de Turnos</footer>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
